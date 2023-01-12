@@ -26,12 +26,12 @@ export function SignInFormContent(props){
     handleReset
   } = props;
   return(<>
-    <Form className={"p-5"}>
+    <Form>
       <Form.Group className="mb-3" controlId="email">
         <Form.Label>Email Address</Form.Label>
         <Form.Control
           type="email"
-          autoFocus onChange={handleChange} onBlur={handleBlur} name={"email"}
+          onChange={handleChange} onBlur={handleBlur} name={"email"}
         />
       </Form.Group>
       <DisplayError errors={errors} touched={touched} field={'email'}/>
@@ -39,14 +39,13 @@ export function SignInFormContent(props){
         <Form.Label>Password</Form.Label>
         <Form.Control
           type="password"
-          autoFocus onChange={handleChange} onBlur={handleBlur} name={"password"}
+          onChange={handleChange} onBlur={handleBlur} name={"password"}
         />
       </Form.Group>
       <DisplayError errors={errors} touched={touched} field={'password'}/>
       <Form.Group className={"mt-3"}>
         <Button onClick={handleSubmit} className="btn btn-primary">Sign In</Button>
       </Form.Group>
-      <DisplayError errors={errors} touched={touched} field={'isOwner'}/>
     </Form>
     <DisplayStatus status={status}/>
   </>)

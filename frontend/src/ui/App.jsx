@@ -5,9 +5,10 @@ import './App.css'
 import { Home } from './Home.jsx'
 import { FourOhFour } from './FourOhFour.jsx'
 import {Provider} from "react-redux";
-import { SignInForm } from './SignInForm.jsx'
 import { Dashboard } from './Dashboard.jsx'
-
+import { SignInPage } from './SignInPage.jsx'
+import { SignUpPage } from './SignUpPage.jsx'
+import './App.css'
 
 
 export function App({store}) {
@@ -18,8 +19,9 @@ export function App({store}) {
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path={"*"} element={<FourOhFour />} />
-                        <Route path={"/sign-in"} element={<SignInForm />} />
-                        <Route path={"/dashboard"} element={<Dashboard />}/>
+                        <Route path={"/sign-up"} element={<SignUpPage />} />
+                        <Route path={"/sign-in"} element={<SignInPage />} />
+                        <Route path={"/dashboard"} element={<Dashboard />} />
                     </Routes>
                 </BrowserRouter>
             </Provider>

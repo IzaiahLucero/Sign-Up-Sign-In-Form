@@ -1,17 +1,19 @@
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar, Row } from 'react-bootstrap'
 
 export function NavigationMenu () {
   return (
     <>
-      <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home">Sample Program</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/">Sign Up</Nav.Link>
-            <Nav.Link href="sign-in">Sign In</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <Container fluid>
+        <Row>
+          <Navbar bg="light">
+              <Navbar.Brand href="/">Sample Program</Navbar.Brand>
+              <Nav className="justify-content-end flex-grow-1">
+                <Nav.Link href="sign-in">Sign In</Nav.Link>
+              </Nav>
+          </Navbar>
+        </Row>
+      </Container>
+
     </>
   )
 }

@@ -81,7 +81,7 @@ function  SignUpFormContent(props){
               name="adminEmail"
               type="text"
               value={values.adminEmail}
-              placeholder="your@email.you"
+              placeholder="Enter Email"
               onChange={handleChange}
               onBlur={handleBlur}
 
@@ -96,7 +96,7 @@ function  SignUpFormContent(props){
                 name="adminName"
                 type="text"
                 value={values.adminName}
-                placeholder="Your Name"
+                placeholder="Enter Name"
                 onChange={handleChange}
                 onBlur={handleBlur}
 
@@ -113,7 +113,7 @@ function  SignUpFormContent(props){
                 name="adminPhone"
                 type="text"
                 value={values.adminPhone}
-                placeholder="(***)***-****"
+                placeholder="***-***-****"
                 onChange={handleChange}
                 onBlur={handleBlur}
 

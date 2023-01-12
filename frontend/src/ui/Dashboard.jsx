@@ -4,20 +4,17 @@ import { NavigationMenu } from './NavigationMenu.jsx'
 export function Dashboard () {
   return (
     <>
-      <Container>
-        <Row>
-          <Col>
-            <NavigationMenu/>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h1>
-              Dashboard
-            </h1>
-          </Col>
-        </Row>
+      <NavigationMenu/>
+      <Container fluid>
+          <Row id="header-background" className="align-items-center">
+            <Col id="header-content">
+              <h1>
+                Congratulations! You've successfully signed in!
+              </h1>
+            </Col>
+          </Row>
       </Container>
+
     </>
   )
 }

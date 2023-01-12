@@ -1,0 +1,25 @@
+#header-background {
+    background-image: url("../assets/header-background-2.jpg") ;
+    height: 94vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#header-content {
+    color: white;
+    text-align: center;
+    font-family: Calibri;
+}
+
+#content-background {
+    background-image: url("../assets/header-background-2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 94vh;
+
+}
+
+#form-background {
+    background-color: white;
+    border-radius: 10px;
+}
