@@ -43,27 +43,14 @@ export function SignInFormContent(props){
         />
       </Form.Group>
       <DisplayError errors={errors} touched={touched} field={'password'}/>
-      <Form.Group className="mb-3 form-check">
-        <Form.Label className="mr-3">User Type</Form.Label>
-        <Form.Check type="radio" onChange={handleChange} onBlur={handleBlur} value={false} label="Customer" name="isOwner"/>
-        <Form.Check type="radio" onChange={handleChange} onBlur={handleBlur} value={true} label="Truck Owner" name="isOwner"/>
-      </Form.Group>
       <Form.Group className={"mt-3"}>
         <Button onClick={handleSubmit} className="btn btn-primary">Sign In</Button>
-        {" "}
-        {/*<Button*/}
-        {/*    className="btn btn-danger"*/}
-        {/*    onClick={handleReset}*/}
-        {/*    disabled={!dirty || isSubmitting}*/}
-        {/*>Reset*/}
-        {/*</Button>*/}
       </Form.Group>
       <DisplayError errors={errors} touched={touched} field={'isOwner'}/>
     </Form>
     <DisplayStatus status={status}/>
   </>)
 }
-
 
 export const SignInForm = () => {
 
@@ -76,8 +63,6 @@ export const SignInForm = () => {
     password: Yup.string()
       .required("Password is Required")
       .min(8, "password must be at least eight characters"),
-    isOwner: Yup.boolean().required("Please select if you are trying to sign in as a customer or food truck owner.")
-
   });
 
   const signIn = {
@@ -87,18 +72,13 @@ export const SignInForm = () => {
   };
   const navigate = useNavigate()
   const submitSignIn = (values, {resetForm, setStatus}) => {
-    const url = values.isOwner === "true" ? '/apis/sign-in-owner' : '/apis/sign-in-customer'
+    const url = '/apis/sign-in-admin'
     httpConfig.post (url,values)
       .then(reply => {
         let {message, type} = reply;
         if(reply.status === 200 && reply.headers["authorization"]) {
           setTimeout (()=> {
-            if (values.isOwner === "true") {
-              navigate('/manage-profile')
-            }
-            navigate("/")
-
-
+            navigate("/dashboard")
           },1500)
           resetForm();
           window.localStorage.removeItem("authorization");

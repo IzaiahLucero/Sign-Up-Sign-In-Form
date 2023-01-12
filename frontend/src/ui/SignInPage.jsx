@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {SignInForm} from "./SignInForm.jsx";
+import { Container } from 'react-bootstrap'
 
 export function SignInPage() {
   const [show, setShow] = useState(false);
@@ -9,7 +10,9 @@ export function SignInPage() {
 
   return (
     <>
-      <SignInForm/>
+      <Container>
+        <SignInForm/>
+      </Container>
     </>
   );
 }
