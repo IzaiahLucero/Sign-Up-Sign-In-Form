@@ -1,6 +1,6 @@
 In order for the form data to be submitted you will need to build the database and update a few files. Below you'll find the various steps you need to take in order to have the application work correctly.
 
-##Digital Ocean Drop Creation
+## Digital Ocean Drop Creation
 1. Once logged into your Digital Ocean account you'll want to click on the "Create" button and select "Droplets".
 2. The default location selected is fine. 
 3. Under "Choose Image" you'll want to click on "Marketplace". 
@@ -11,7 +11,7 @@ In order for the form data to be submitted you will need to build the database a
 8. Final field to check is going to be "Project". You can leave this as the deault or select a project if you created one.
 9. Once the droplet has been created you are going to want to take note of your ipv4 address as you'll need this later. 
 
-##Web Storm Deployment Configuration 
+## Web Storm Deployment Configuration 
 1. Once you've copied the project into webstorm you'll want to go to Tools > Deployment > Configuration. 
 2. In the deployment you'll want to click on the plus icon in the top left corner. From the list select SFTP. Then in the "New server name" box type in the name of your project. 
 3. In the SSH configuration menu select the 3 dots to the right. This will open the SSH configuation window. 
