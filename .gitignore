@@ -25,3 +25,4 @@
 */yarn-error.log*
 
 /frontend/setupProxy.js
+/node_modules/
