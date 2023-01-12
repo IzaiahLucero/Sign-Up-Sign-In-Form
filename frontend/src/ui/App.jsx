@@ -5,6 +5,7 @@ import './App.css'
 import { Home } from './Home.jsx'
 import { FourOhFour } from './FourOhFour.jsx'
 import {Provider} from "react-redux";
+import { SignInForm } from './SignInForm.jsx'
 
 
 
@@ -14,8 +15,10 @@ export function App({store}) {
             <Provider store={store}>
                 <BrowserRouter>
                     <Routes>
-                        <Route  path='/' element={<Home />} />
+                        <Route path='/' element={<Home />} />
                         <Route path={"*"} element={<FourOhFour />} />
+                        <Route path={"/sign-in"} element={<SignInForm />} />
+
                     </Routes>
                 </BrowserRouter>
             </Provider>

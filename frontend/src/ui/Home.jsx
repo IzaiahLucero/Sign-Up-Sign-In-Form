@@ -1,6 +1,8 @@
 import React, {useEffect} from "react"
 import { Col, Container, Row } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
+import { SignUpFormAdmin } from './SignUpFormAdmin.jsx'
+import { NavigationMenu } from './NavigationMenu.jsx'
 
 
 export function Home() {
@@ -16,7 +18,12 @@ export function Home() {
           <Container>
             <Row>
               <Col>
-                <h1>Test</h1>
+                <NavigationMenu/>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <SignUpFormAdmin/>
               </Col>
             </Row>
           </Container>

@@ -6,7 +6,7 @@ ARG PORT=4200
 ENV PORT $PORT
 EXPOSE $PORT 9229 9230
 
-WORKDIR ./home/node/app
+WORKDIR /home/node/app
 COPY package.json package-lock.json ./
 COPY tsconfig.json ./
 RUN chown node:node -R ./
